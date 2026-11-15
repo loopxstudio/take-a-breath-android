@@ -114,6 +114,16 @@ summary:after{content:"+";font-size:22px;color:var(--accent);line-height:1}
 details[open] summary:after{content:"−"}
 details p{color:var(--muted);margin-top:12px}
 
+.stores{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.store{display:flex;align-items:center;gap:14px;text-align:left;border-radius:16px;padding:12px 22px 12px 16px;min-width:230px;background:#000;color:#fff;border:1px solid rgba(255,255,255,.28);cursor:default}
+.store svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.store small{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#a9bcc9;line-height:1.2}
+.store b{display:block;font-size:19px;font-weight:600;line-height:1.25;letter-spacing:-.01em}
+a.store{cursor:pointer}a.store:hover{text-decoration:none;transform:translateY(-1px)}
+.hero .stores{margin-top:6px}
+.get{text-align:center}
+.get .stores{margin-top:8px}
+.get .store{background:var(--navy);border-color:var(--navy)}
 .note{font-size:14px;color:var(--muted);max-width:760px;margin:26px auto 0;text-align:center}
 
 /* footer */
@@ -137,6 +147,7 @@ footer .links a{color:#424245}
       <li><a href="#who">Who it's for</a></li>
       <li><a href="#wellbeing">Wellbeing</a></li>
       <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#get">Get the app</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
   </div>
@@ -145,7 +156,7 @@ footer .links a{color:#424245}
 <header class="hero" id="top">
   <div class="wrap">
     <svg class="logo" width="132" height="132" viewBox="0 0 120 120" role="img" aria-label="Take a Breath logo"><rect width="120" height="120" rx="28" fill="#0b1d2a" stroke="rgba(255,255,255,.12)"/><g class="all"><circle class="ring r1" cx="60" cy="60" r="12.4" stroke-dasharray="15 7"/><circle class="ring r2" cx="60" cy="60" r="19.8" stroke-dasharray="19 9"/><circle class="ring r3" cx="60" cy="60" r="27.3" stroke-dasharray="22 10"/><circle class="ring r4" cx="60" cy="60" r="34.7" stroke-dasharray="27 11"/></g></svg>
-    <span class="eyebrow">For Android</span>
+    <span class="eyebrow">Android · iPhone</span>
     <h1>Pause. Breathe.<br>Then decide.</h1>
     <p class="lead">Take a Breath adds a calm, mindful pause before the apps that pull you in, so scrolling becomes a choice instead of a habit. For you, and for the family.</p>
     <div class="badges">
@@ -155,8 +166,17 @@ footer .links a{color:#424245}
       <span class="badge">Works offline</span>
       <span class="badge">Nothing collected</span>
     </div>
-    <a class="cta" href="#how">See how it works</a>
-    <span class="soon">Coming soon to Google Play</span>
+    <div class="stores">
+      <div class="store" role="img" aria-label="Android version, coming soon on Google Play">
+        <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>
+        <span><small>Android · Coming soon</small><b>Google Play</b></span>
+      </div>
+      <div class="store" role="img" aria-label="iPhone version, coming soon on the App Store">
+        <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3"/><path d="M10.5 4.8h3M11 19h2"/></svg>
+        <span><small>iPhone · Coming soon</small><b>App Store</b></span>
+      </div>
+    </div>
+    <span class="soon"><a href="#how" style="color:#9fb3c1;text-decoration:underline">See how it works</a></span>
   </div>
 </header>
 
@@ -272,11 +292,31 @@ footer .links a{color:#424245}
   </div>
 </section>
 
-<section class="alt" id="faq">
+<section class="alt" id="get">
+  <div class="wrap get">
+    <div class="kicker">Get the app</div>
+    <h2>Available soon on Android and iPhone.</h2>
+    <p class="sub" style="margin-left:auto;margin-right:auto">One calm habit, on every phone in the family. The Android version is going through Google Play review, and the iPhone version follows. Bookmark this page for the download links.</p>
+    <div class="stores">
+      <div class="store" role="img" aria-label="Android version, coming soon on Google Play">
+        <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>
+        <span><small>Android · Coming soon</small><b>Google Play</b></span>
+      </div>
+      <div class="store" role="img" aria-label="iPhone version, coming soon on the App Store">
+        <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3"/><path d="M10.5 4.8h3M11 19h2"/></svg>
+        <span><small>iPhone · Coming soon</small><b>App Store</b></span>
+      </div>
+    </div>
+    <p class="note">Google Play and the Google Play logo are trademarks of Google LLC. App Store is a service mark of Apple Inc. Android and iPhone availability may vary by device and region.</p>
+  </div>
+</section>
+
+<section id="faq">
   <div class="wrap" style="max-width:780px">
     <div class="kicker">FAQ</div>
     <h2>Good questions</h2>
     <p class="sub" style="margin-bottom:28px">Quick answers about how Take a Breath works.</p>
+    <details><summary>Is there an iPhone version?</summary><p>Yes, an iPhone version is being prepared. Check back here for the App Store link when it is available.</p></details>
     <details><summary>Is Take a Breath really free?</summary><p>Yes. It is free to use and has no advertising and no in-app tracking.</p></details>
     <details><summary>Does it collect or share any data?</summary><p>No. Settings stay on your device and the app cannot access the internet. Read the full <a href="privacy.html">Privacy Policy</a>.</p></details>
     <details><summary>Can I use it on my child's phone?</summary><p>Yes. Turn on the Parent lock with a numeric PIN so only you can change settings. For preventing uninstall or controlling app installs, use Google Family Link alongside Take a Breath.</p></details>
